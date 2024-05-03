@@ -1,0 +1,29 @@
+:root {
+  --light: #f6f6f6;
+  --red: #e74c3c;
+  --yellow: #fbc70a;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.swim-lanes {
+  min-height: 60vh;
+}
+
+.task-card {
+  margin: 0 auto;
+}
+
+.task-card:hover {
+  cursor: grab;
+}
+.task-late {
+  background-color: var(--red);
+}
+
+.task-today {
+  background-color: var(--yellow);
+}
