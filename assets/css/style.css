@@ -1,29 +1,120 @@
-:root {
-  --light: #f6f6f6;
-  --red: #e74c3c;
-  --yellow: #fbc70a;
-}
-
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
 }
 
-.swim-lanes {
-  min-height: 60vh;
+.head {
+  background-color: #1976d2;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.task-card {
-  margin: 0 auto;
+.head img {
+  width: 50px;
+  margin-right: 10px;
 }
 
-.task-card:hover {
-  cursor: grab;
+.head h1 {
+  font-size: 24px;
+  margin: 0;
 }
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.column {
+  width: calc(33% - 20px);
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.tasks-in-btn {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.task-container {
+  min-height: 50px;
+}
+
+.task {
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .task-late {
-  background-color: var(--red);
+  background-color: #e74c3c;
+  color: #fff;
 }
 
 .task-today {
-  background-color: var(--yellow);
+  background-color: #fbc70a;
+  color: #fff;
+}
+
+.delete-btn {
+  cursor: pointer;
+  color: #d9534f;
+}
+
+.add-task-btn {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-task-btn:hover {
+  background-color: #45a049;
+}
+
+.task-todo {
+  background-color: #ffcccc; /* Light red */
+}
+
+.task-in-progress {
+  background-color: #ffffcc; /* Light yellow */
+}
+
+.task-done {
+  background-color: #ccffcc; /* Light green */
+}
+
+.card {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: move;
 }

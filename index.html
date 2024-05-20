@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="icon" type="image/x-icon" href="https://www.google.com/s2/favicons?sz=64&domain=yourdomain.com">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
-
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Task Board</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-
 <body>
   <header class="p-4 mb-4 text-center border-bottom border-5">
     <h1 class="display-3">Task Board</h1>
@@ -44,7 +37,7 @@
               </div>
               <div class="mb-3">
                 <label for="taskDeadline" class="form-label">Deadline</label>
-                <input type="text" class="form-control" id="taskDeadline" required>
+                <input type="date" class="form-control" id="taskDeadline" required>
               </div>
               <button type="submit" class="btn btn-primary">Add Task</button>
             </form>
@@ -58,8 +51,7 @@
           <div class="card-header bg-white">
             <h2 class="card-title mb-1">To Do</h2>
           </div>
-          <div class="card-body bg-light" id="todo-cards">
-            </div>
+          <div class="card-body bg-light" id="todo-cards" ondrop="drop(event, 'todo')" ondragover="allowDrop(event)"></div>
         </div>
       </div>
       <div class="col-12 col-lg-4 d-flex">
@@ -67,8 +59,7 @@
           <div class="card-header bg-white">
             <h2 class="card-title mb-1">In Progress</h2>
           </div>
-          <div class="card-body bg-light" id="in-progress-cards">
-            </div>
+          <div class="card-body bg-light" id="in-progress-cards" ondrop="drop(event, 'in-progress')" ondragover="allowDrop(event)"></div>
         </div>
       </div>
       <div class="col-12 col-lg-4 d-flex">
@@ -76,22 +67,15 @@
           <div class="card-header bg-white">
             <h2 class="card-title mb-1">Done</h2>
           </div>
-          <div class="card-body bg-light" id="done-cards">
-            </div>
+          <div class="card-body bg-light" id="done-cards" ondrop="drop(event, 'done')" ondragover="allowDrop(event)"></div>
         </div>
       </div>
     </div>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
-
 </html>
